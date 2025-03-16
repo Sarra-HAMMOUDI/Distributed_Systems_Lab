@@ -4,4 +4,4 @@ Distributed_Systems_Lab/
 │   ├── Bank_Account_RMI/     # Banking system using RMI  
 ├── Sockets/                  # Learn client-server communication with sockets  
 │   ├── Single_Client_Socket/ # One client, one server  
-│   ├── Multi_Client_Socket/  # Support multiple clients  
+│   ├── Multi_Client_Socket/  # Supports multiple clients  
