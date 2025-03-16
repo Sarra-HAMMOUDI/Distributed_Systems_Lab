@@ -1,0 +1,103 @@
+# RMI Bank Account System
+
+This project demonstrates a **distributed banking system** using Java Remote Method Invocation (RMI). Clients can perform operations such as creating accounts, depositing money, withdrawing money, and checking balances.
+
+---
+
+## Table of Contents
+1. [Prerequisites](#prerequisites)
+2. [Project Structure](#project-structure)
+3. [Compiling the Code](#compiling-the-code)
+4. [Running the System](#running-the-system)
+   - [Start the RMI Registry](#start-the-rmi-registry)
+   - [Run the Server](#run-the-server)
+   - [Run the Client](#run-the-client)
+5. [Troubleshooting](#troubleshooting)
+6. [License](#license)
+
+---
+
+## Prerequisites
+- **Java Development Kit (JDK)**: Version 11 or higher.
+- **IDE** (Optional): Eclipse, IntelliJ, or any other Java IDE.
+- **Command-Line Tools**: Ensure `javac` and `java` are available in your PATH.
+
+---
+
+## Project Structure
+The project consists of the following files:
+
+```
+RMI_Bank_Account/
+├── src/
+│   ├── RMI/
+│   │   ├── BankAccount.java            # Remote interface
+│   │   ├── BankAccountImpl.java        # Implementation of the remote interface
+│   │   ├── BankServer.java             # Server application
+│   │   ├── BankClient.java             # Client application
+│   │   ├── InsufficientFundsException.java  # Custom exception
+│   │   └── AccountNotFoundException.java    # Custom exception
+├── README.md                           # This file
+```
+
+---
+
+## Compiling the Code
+1. Open a terminal or command prompt.
+2. Navigate to the `src` directory:
+   ```sh
+   cd RMI_Bank_Account/src
+   ```
+3. Compile the Java files:
+   ```sh
+   javac RMI/*.java
+   ```
+
+---
+
+## Running the System
+
+### **Start the RMI Registry**
+1. Open a terminal or command prompt.
+2. Navigate to the `src` directory:
+   ```sh
+   cd RMI_Bank_Account/src
+   ```
+3. Start the RMI registry:
+   ```sh
+   rmiregistry
+   ```
+
+### **Run the Server**
+1. Open a new terminal or command prompt.
+2. Navigate to the `src` directory:
+   ```sh
+   cd RMI_Bank_Account/src
+   ```
+3. Run the server:
+   ```sh
+   java RMI.BankServer
+   ```
+4. You should see the message:  
+   ```
+   Bank Server is running...
+   ```
+
+### **Run the Client**
+1. Open a new terminal or command prompt.
+2. Navigate to the `src` directory:
+   ```sh
+   cd RMI_Bank_Account/src
+   ```
+3. Run the client:
+   ```sh
+   java RMI.BankClient
+   ```
+
+---
+
+## Troubleshooting
+- If `javac` or `java` commands are not recognized, ensure Java is installed and added to your system's PATH.
+- If you get a `java.rmi.ConnectException`, verify that the **rmiregistry** is running and not blocked by a firewall.
+- Ensure the server and client are running from the correct package structure.
+
